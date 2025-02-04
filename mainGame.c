@@ -49,9 +49,6 @@ int login() {
 
 void plus_game() {
     int correct = 0;
-void plus_game()
-{
-    // TODO: declare a counter to count how many correct answers the user has given
     int i;
     for (i = 0; i < 10; i++)
     {
@@ -71,13 +68,6 @@ void plus_game()
     }
 
     printf("You have answered %d questions correctly. Your accuracy is %d%%\n", correct, correct * 10);
-
-
-        // TODO: check if the user's answer is correct
-    }
-
-    // TODO: print the number of correct answers and the accuracy of the user
-    // E.g. "You have answered 7 questions correctly. Your accuracy is 70%"
 }
 
 void minus_game() {
@@ -99,8 +89,6 @@ void minus_game() {
         }
     }
     printf("You have answered %d questions correctly. Your accuracy is %d%%\n", correct, correct * 10);
-void minus_game()
-{
 }
 
 void multiply_game() {
@@ -122,8 +110,6 @@ void multiply_game() {
         }
     }
     printf("You have answered %d questions correctly. Your accuracy is %d%%\n", correct, correct * 10);
-void multiply_game()
-{
 }
 
 void divide_game() {
@@ -145,34 +131,8 @@ void divide_game() {
         }
     }
     printf("You have answered %d questions correctly. Your accuracy is %d%%\n", correct, correct * 10);
-
-void divide_game()
-{
 }
 
-void change_username() {
-    printf("Enter your new username: ");
-    char new_username[20];
-    scanf("%s", new_username);
-
-    if (strstr(new_username, "admin") != NULL) {
-        printf("You can't have admin in your username\n");
-        main_menu();
-        return;
-    } else if (strstr(new_username, "root") != NULL) {
-        printf("You can't have admin in your username\n");
-        main_menu();
-        return;
-    } else if (strstr(new_username, "guesr") != NULL) {
-        printf("You can't have admin in your username\n");
-        main_menu();
-        return;
-    }
-
-    strcpy(username, new_username);
-    printf("Your username has been changed to %s\n", username);
-
-}
 void change_username()
 {
     int good = 0;
