@@ -125,7 +125,7 @@ void change_username()
         char proposed_username[20] = "user";
         scanf("%s", proposed_username);
 
-        if (strlen(proposed_username) > 8)
+        if (!(strlen(proposed_username) < 4 || strstr(proposed_password, "admin") != NULL || strstr(proposed_password, "root") != NULL || strstr(proposed_password, "guest") != NULL))
         {
             strcpy(username, proposed_username);
             printf("Success! \n");
@@ -133,7 +133,7 @@ void change_username()
         }
         else
         {
-            printf("Invalid! Username must exceed 8 characters. \n");
+            printf("Invalid! Username must exceed 4 characters. \n It also cannot contain \"guest\", \"root\", or \"admin\"\n");
         }
     }
 }
@@ -147,7 +147,7 @@ void change_password()
         char proposed_password[20] = "user";
         scanf("%s", proposed_password);
 
-        if (strlen(proposed_password) < 8 || strstr(proposed_password, "admin") != NULL || strstr(proposed_password, "root") != NULL || strstr(proposed_password, "guest") != NULL)
+        if (strlen(proposed_password) >= 4)
         {
             strcpy(username, proposed_password);
             printf("Success! \n");
@@ -155,7 +155,7 @@ void change_password()
         }
         else
         {
-            printf("Invalid! Password must be equal or exceed 8 characters. \n It also cannot contain \"guest\", \"root\", or \"admin\"\n");
+            printf("Invalid! Password must be equal or exceed 4 characters. \n ");
         }
     }
 }
