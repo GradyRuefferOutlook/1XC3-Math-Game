@@ -183,12 +183,12 @@ int login()
             return 1;
         }
 
+        printf("Incorrect Password, Please Try Again\n");
+
         printf("Enter your username: ");
         scanf("%s", input_username);
         printf("Enter your password: ");
         scanf("%s", input_password);
-
-        printf("Incorrect Password, Please Try Again\n");
     }
 
     printf("Too many failed attempts. Returning to main menu.\n");
