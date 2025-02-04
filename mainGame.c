@@ -149,7 +149,7 @@ void change_password()
 
         if (strlen(proposed_password) >= 4)
         {
-            strcpy(username, proposed_password);
+            strcpy(password, proposed_password);
             printf("Success! \n");
             good = 1;
         }
