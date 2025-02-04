@@ -134,23 +134,24 @@ void divide_game() {
 
 void change_username() {
     printf("Enter your new username: ");
-    scanf("%s", username);
+    char new_username[20];
+    scanf("%s", new_username);
 
-    if (strstr(username, "admin") != NULL) {
+    if (strstr(new_username, "admin") != NULL) {
         printf("You can't have admin in your username\n");
         main_menu();
         return;
-    } else if (strstr(username, "root") != NULL) {
+    } else if (strstr(new_username, "root") != NULL) {
         printf("You can't have admin in your username\n");
         main_menu();
         return;
-    } else if (strstr(username, "guesr") != NULL) {
+    } else if (strstr(new_username, "guesr") != NULL) {
         printf("You can't have admin in your username\n");
         main_menu();
         return;
     }
 
-    username[20] = username;
+    strcpy(username, new_username);
     printf("Your username has been changed to %s\n", username);
 
 }
