@@ -55,12 +55,22 @@ void plus_game() {
         int user_result;
         printf("%d + %d = ", a, b);
         scanf("%d", &user_result);
+
+        if (user_result == result) {
+            printf("Correct\n");
+            i++;
+        } else {
+            printf("Incorrect. The correct answer is %d\n", result);
+        }
         
         // TODO: check if the user's answer is correct
     }
 
     // TODO: print the number of correct answers and the accuracy of the user
     // E.g. "You have answered 7 questions correctly. Your accuracy is 70%"
+
+    printf("You have answered %d questions correctly. Your accuracy is %d%%\n", i, i * 10);
+    
 }
 
 void minus_game() {
