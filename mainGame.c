@@ -46,7 +46,7 @@ int login() {
 }
 
 void plus_game() {
-    // TODO: declare a counter to count how many correct answers the user has given
+    int correct = 0;
     int i;
     for (i = 0; i < 10; i++) {
         int a = get_random_number();
@@ -58,22 +58,18 @@ void plus_game() {
 
         if (user_result == result) {
             printf("Correct\n");
-            i++;
+            correct++;
         } else {
             printf("Incorrect. The correct answer is %d\n", result);
         }
-        
-        // TODO: check if the user's answer is correct
     }
 
-    // TODO: print the number of correct answers and the accuracy of the user
-    // E.g. "You have answered 7 questions correctly. Your accuracy is 70%"
-
-    printf("You have answered %d questions correctly. Your accuracy is %d%%\n", i, i * 10);
+    printf("You have answered %d questions correctly. Your accuracy is %d%%\n", correct, correct * 10);
 
 }
 
 void minus_game() {
+    int correct = 0;
     int i;
     for (i = 0; i < 10; i++) {
         int a = get_random_number();
@@ -85,15 +81,16 @@ void minus_game() {
 
         if (user_result == result) {
             printf("Correct\n");
-            i++;
+            correct++;
         } else {
             printf("Incorrect. The correct answer is %d\n", result);
         }
     }
-    printf("You have answered %d questions correctly. Your accuracy is %d%%\n", i, i * 10);
+    printf("You have answered %d questions correctly. Your accuracy is %d%%\n", correct, correct * 10);
 }
 
 void multiply_game() {
+    int correct = 0;
     int i;
     for (i = 0; i < 10; i++) {
         int a = get_random_number();
@@ -105,15 +102,16 @@ void multiply_game() {
 
         if (user_result == result) {
             printf("Correct\n");
-            i++;
+            correct++;
         } else {
             printf("Incorrect. The correct answer is %d\n", result);
         }
     }
-    printf("You have answered %d questions correctly. Your accuracy is %d%%\n", i, i * 10);
+    printf("You have answered %d questions correctly. Your accuracy is %d%%\n", correct, correct * 10);
 }
 
 void divide_game() {
+    int correct = 0;
     int i;
     for (i = 0; i < 10; i++) {
         int a = get_random_number();
@@ -125,16 +123,35 @@ void divide_game() {
 
         if (user_result == result) {
             printf("Correct\n");
-            i++;
+            correct++;
         } else {
             printf("Incorrect. The correct answer is %d\n", result);
         }
     }
-    printf("You have answered %d questions correctly. Your accuracy is %d%%\n", i, i * 10);
+    printf("You have answered %d questions correctly. Your accuracy is %d%%\n", correct, correct * 10);
 
 }
 
 void change_username() {
+    printf("Enter your new username: ");
+    scanf("%s", username);
+
+    if (strstr(username, "admin") != NULL) {
+        printf("You can't have admin in your username\n");
+        main_menu();
+        return;
+    } else if (strstr(username, "root") != NULL) {
+        printf("You can't have admin in your username\n");
+        main_menu();
+        return;
+    } else if (strstr(username, "guesr") != NULL) {
+        printf("You can't have admin in your username\n");
+        main_menu();
+        return;
+    }
+
+    username[20] = username;
+    printf("Your username has been changed to %s\n", username);
 
 }
 
