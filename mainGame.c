@@ -147,7 +147,7 @@ void change_password()
         char proposed_password[20] = "user";
         scanf("%s", proposed_password);
 
-        if (strlen(proposed_password) > 8)
+        if (strlen(proposed_password) < 8 || strstr(proposed_password, "admin") != NULL || strstr(proposed_password, "root") != NULL || strstr(proposed_password, "guest") != NULL)
         {
             strcpy(username, proposed_password);
             printf("Success! \n");
@@ -155,7 +155,7 @@ void change_password()
         }
         else
         {
-            printf("Invalid! Password must exceed 8 characters. \n");
+            printf("Invalid! Password must be equal or exceed 8 characters. \n It also cannot contain \"guest\", \"root\", or \"admin\"\n");
         }
     }
 }
