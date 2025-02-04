@@ -30,23 +30,6 @@ int main_menu()
     return choice;
 }
 
-int login() {
-    char input_username[20];
-    char input_password[20];
-
-    printf("Enter your username: ");
-    scanf("%s", input_username);
-    printf("Enter your password: ");
-    scanf("%s", input_password);
-
-    // TODO: use a loop to check username and password
-    // If the user enters the wrong username or password 3 times, return 0
-    // If the login is successful but the user is using the default username and password,
-    // ask the user to change the username and password and return 1
-    // If the login is successful, return 1
-    return 0;
-}
-
 void plus_game() {
     int correct = 0;
     int i;
