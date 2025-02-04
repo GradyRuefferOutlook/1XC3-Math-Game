@@ -70,18 +70,67 @@ void plus_game() {
     // E.g. "You have answered 7 questions correctly. Your accuracy is 70%"
 
     printf("You have answered %d questions correctly. Your accuracy is %d%%\n", i, i * 10);
-    
+
 }
 
 void minus_game() {
+    int i;
+    for (i = 0; i < 10; i++) {
+        int a = get_random_number();
+        int b = get_random_number();
+        int result = a - b;
+        int user_result;
+        printf("%d - %d = ", a, b);
+        scanf("%d", &user_result);
 
+        if (user_result == result) {
+            printf("Correct\n");
+            i++;
+        } else {
+            printf("Incorrect. The correct answer is %d\n", result);
+        }
+    }
+    printf("You have answered %d questions correctly. Your accuracy is %d%%\n", i, i * 10);
 }
 
 void multiply_game() {
+    int i;
+    for (i = 0; i < 10; i++) {
+        int a = get_random_number();
+        int b = get_random_number();
+        int result = a * b;
+        int user_result;
+        printf("%d * %d = ", a, b);
+        scanf("%d", &user_result);
 
+        if (user_result == result) {
+            printf("Correct\n");
+            i++;
+        } else {
+            printf("Incorrect. The correct answer is %d\n", result);
+        }
+    }
+    printf("You have answered %d questions correctly. Your accuracy is %d%%\n", i, i * 10);
 }
 
 void divide_game() {
+    int i;
+    for (i = 0; i < 10; i++) {
+        int a = get_random_number();
+        int b = get_random_number();
+        int result = a / b;
+        int user_result;
+        printf("%d / %d = ", a, b);
+        scanf("%d", &user_result);
+
+        if (user_result == result) {
+            printf("Correct\n");
+            i++;
+        } else {
+            printf("Incorrect. The correct answer is %d\n", result);
+        }
+    }
+    printf("You have answered %d questions correctly. Your accuracy is %d%%\n", i, i * 10);
 
 }
 
