@@ -125,7 +125,7 @@ void change_username()
         char proposed_username[20] = "user";
         scanf("%s", proposed_username);
 
-        if (!(strlen(proposed_username) < 4 || strstr(proposed_password, "admin") != NULL || strstr(proposed_password, "root") != NULL || strstr(proposed_password, "guest") != NULL))
+        if (!(strlen(proposed_username) < 4 || strstr(proposed_username, "admin") != NULL || strstr(proposed_username, "root") != NULL || strstr(proposed_username, "guest") != NULL))
         {
             strcpy(username, proposed_username);
             printf("Success! \n");
